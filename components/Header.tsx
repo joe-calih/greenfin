@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ChevronDown, Play } from 'lucide-react'
+import { Play } from 'lucide-react'
 import {
   NavigationMenu,
   NavigationMenuContent,

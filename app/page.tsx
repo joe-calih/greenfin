@@ -1,18 +1,8 @@
-import Link from "next/link"
 import Image from "next/image"
-import { ChevronDown, Instagram, Link2, MessageSquare, Moon, Play, Search, ShoppingCart } from 'lucide-react'
+import {Link2, MessageSquare, Moon, Play, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
 import BlogSection from "@/components/blog-section"
 import PricingSection from "@/components/pricing-section"
-import GlobalCommerceSection from "@/components/commerce-section"
 import Testimonials from "@/components/testimonials (1)"
 import FAQSection from "@/components/faq-section"
 import SeoSection from "@/components/seo-section"

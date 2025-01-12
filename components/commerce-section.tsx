@@ -48,7 +48,7 @@ export default function GlobalCommerceSection() {
                 Sell Everywhere in Global Commerce
               </h2>
               <p className="max-w-[600px] text-gray-200">
-                When you sell your software products to global customers, accepting local payment methods is critical in capturing the total market opportunity. Don't let payment friction get in the way of a single sale. Allow customers to pay in their local currency.
+                When you sell your software products to global customers, accepting local payment methods is critical in capturing the total market opportunity. Dont let payment friction get in the way of a single sale. Allow customers to pay in their local currency.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-4 sm:gap-8">

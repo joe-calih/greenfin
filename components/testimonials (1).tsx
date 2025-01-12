@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Card } from "@/components/ui/card"
 import { Star } from 'lucide-react'
 
@@ -71,13 +72,15 @@ export default function Testimonials() {
                 className="text-white mb-6"
                 itemProp="reviewBody"
               >
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div className="flex items-center gap-3">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a5451e211998531.672d0926cbh9e0-4IfJRZHN9gDGjjqVsKGUUfDMH0fnl6.png"
+                <Image
+                  src="/1.png"
                   alt=""
-                  className="w-12 h-12 rounded-full"
+                  width={48}
+                  height={48}
+                  className="rounded-full"
                   loading="lazy"
                 />
                 <div>
