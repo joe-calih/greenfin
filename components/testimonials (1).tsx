@@ -10,22 +10,22 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without dilution by financing their SaaS receivables.",
+    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without dilution.",
     author: "Orlando Digas",
     role: "Marketing, Layers"
   },
   {
-    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without dilution by financing their SaaS receivables.",
+    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without.",
     author: "Orlando Digas",
     role: "Marketing, Layers"
   },
   {
-    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without dilution by financing their SaaS receivables.",
+    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without.",
     author: "Orlando Digas",
     role: "Marketing, Layers"
   },
   {
-    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without dilution by financing their SaaS receivables.",
+    quote: "Daily is the tool every SaaS founder has been for. It allows SaaS companies to grow without.",
     author: "Orlando Digas",
     role: "Marketing, Layers"
   }
@@ -75,14 +75,7 @@ export default function Testimonials() {
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div className="flex items-center gap-3">
-                <Image
-                  src="/1.png"
-                  alt=""
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                  loading="lazy"
-                />
+            
                 <div>
                   <div 
                     className="text-white font-medium"

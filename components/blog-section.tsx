@@ -53,22 +53,6 @@ const blogPosts = [
     date: "2024-01-31",
     imageUrl: "/placeholder.svg?height=200&width=300",
   },
-  {
-    id: 7,
-    title: "Understanding Risk Management",
-    excerpt: "Key strategies for identifying, assessing, and mitigating financial risks in business.",
-    author: "Sarah Chen",
-    date: "2024-02-03",
-    imageUrl: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    id: 8,
-    title: "The Basics of Corporate Finance",
-    excerpt: "An introduction to how companies make financial decisions and manage their resources.",
-    author: "Michael Taylor",
-    date: "2024-02-06",
-    imageUrl: "/placeholder.svg?height=200&width=300",
-  },
 ]
 
 export default function BlogSection() {
@@ -76,7 +60,7 @@ export default function BlogSection() {
     <section className="bg-[#F0FFF4] py-16 md:py-24">
       <div className="mx-auto max-w-[1180px] px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-[#004D2C] mb-8 text-center">Latest Blogs</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {blogPosts.map((post) => (
             <Card key={post.id} className="bg-white border-[#E6F7ED] shadow-sm hover:shadow-md transition-shadow duration-300">
               <CardHeader className="p-0">
