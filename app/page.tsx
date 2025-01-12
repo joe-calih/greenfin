@@ -1,101 +1,121 @@
-import Image from "next/image";
+import Link from "next/link"
+import Image from "next/image"
+import { ChevronDown, Instagram, Link2, MessageSquare, Moon, Play, Search, ShoppingCart } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+import BlogSection from "@/components/blog-section"
+import PricingSection from "@/components/pricing-section"
+import GlobalCommerceSection from "@/components/commerce-section"
+import Testimonials from "@/components/testimonials (1)"
+import FAQSection from "@/components/faq-section"
+import SeoSection from "@/components/seo-section"
+import Header from "@/components/Header"
 
-export default function Home() {
+
+export default function LandingPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Greenfin",
+            "description": "Create stunning financial business websites",
+            "url": "https://Greenfin.com",
+            "potentialAction": {
+              "@type": "Action",
+              "target": "https://Greenfin.com/try-free",
+              "name": "Try Greenfin"
+            }
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-[#004D2C]">
+        {/* Navigation */}
+        <Header/>
+
+
+        {/* Main Content */}
+        <main className="pt-24">
+          {/* Hero Section */}
+          <div className="mx-auto max-w-[1180px] px-4 py-16 md:py-24 text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+              Grow your financial business<br />with a stunning website
+            </h1>
+            <p className="max-w-3xl mx-auto text-white/80 text-lg md:text-xl mb-12">
+              With Greenfin, you can easily create a stunning website that is both beautiful and user-friendly. 
+              Whether you are a small business owner or a large corporation, this theme is perfect for you. 
+              It is incredibly easy to use, even for those with limited technical skills, and you can have 
+              your website up and running in no time.
+            </p>
+            <Button 
+              className="bg-[#9FE870] text-[#004D2C] hover:bg-[#8FD860] text-lg px-6 py-3 h-auto"
+            >
+              Try Greenfin for free →
+            </Button>
+            <p className="text-white/60 mt-4 text-sm">
+              Test it for free, for 7 days. No credit card required.
+            </p>
+          </div>
+
+          {/* Preview Image */}
+          <div className="mx-auto max-w-[1180px] px-4 mt-2 pb-8">
+      <div className="relative h-[400px] md:h-[600px] rounded-xl overflow-hidden group">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/behance/green.png"
+          alt="Greenfin dashboard preview"
+          fill
+          className="object-cover"
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="absolute inset-0 flex items-center justify-center">
+          <button
+            className=" text-[#9FE870] rounded-full  transform scale-90 hover:opacity-90 transition-all duration-300 hover:scale-100 focus:outline-none"
+            aria-label="Play video"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Play className="w-16 h-16 md:w-16 md:h-16" fill="currentColor" />
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
-  );
+        </main>
+        
+
+        {/* Fixed Sidebar */}
+        <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4">
+          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
+            <Search className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
+            <Link2 className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
+            <MessageSquare className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
+            <Moon className="h-5 w-5" />
+          </Button>
+        </div>
+
+        <BlogSection />
+        <SeoSection/>
+        <PricingSection/>
+        <Testimonials/>
+        <FAQSection/>
+
+      </div>
+    </>
+  )
 }
+
