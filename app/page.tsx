@@ -84,11 +84,11 @@ export default function LandingPage() {
 
         {/* Fixed Sidebar */}
         <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4">
-          <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
             <Moon className="h-5 w-5" />
           </Button>
           <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
-            <Link2 className="h-5 w-5" />
+            <Search className="h-5 w-5" />
           </Button>
           <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-[#9FE870]">
             <MessageSquare className="h-5 w-5" />
